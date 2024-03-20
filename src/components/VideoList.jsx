@@ -1,9 +1,8 @@
 import VideoItem from './VideoItem';
-
-/* eslint-disable react/prop-types */
+import style from './VideoList.module.css';
 const VideoList = ({ title, playList }) => {
 	return (
-		<div>
+		<div className={style.container}>
 			<h2>{title}</h2>
 			{playList.map((item, pos) => (
 				<VideoItem key={pos} {...item} />
